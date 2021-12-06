@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  main.container
+    .p-4.p-md-5.mb-4.rounded.mt-4
+      .row
+        .col-md-7.px-0
+          h1.display-4.fst-italic Clasificación de residuos sólidos
+          b PROBLEMA
+          p.lead.my-3
+            | Una mala clasificación al momento de reciclar (o “wishcycling”) supone varios problemas para el sistema de manejo de residuos, es uno de los mayores problemas que enfrenta la industria en la actualidad. 
+          p.lead.my-3
+            | Se busca facilitar la clasificación correcta de residuos reciclables para contribuir a la protección del medioambiente, frenando la contaminación ambiental y protegiendo el planeta. 
+        .col-md-5.px-0
+          img(src="/images/logo.png", class="img-fluid")
+    .row.g-5.mb-4
+      .col-md-8
+        h3.pb-4.mb-4.fst-italic.border-bottom
+          | Formulario de clasificación
+        article.blog-post
+          p
+            | El usuario toma una foto del residuo del que no está seguro  de cómo clasificar y lo ingresa a la aplicación. Se le informa, según el estándar, Colombiano en que caneca debe debe depositarlo.
+          hr
+          form(
+            action="/result" 
+            enctype="multipart/form-data"
+            method='post' )
+            .mb-3.row
+              label.col-sm-2.col-form-label(for='imagen') Archivo Imagen
+              .col-sm-10
+                input.form-control#imagen(type='file' name='imagen' placeholder=' ' accept='image/svg+xml,image/png,image/jpeg,image/webp' required)
+            nav.blog-pagination(aria-label='Pagination')
+              button.btn.btn-outline-primary(type='submit') Clasificar

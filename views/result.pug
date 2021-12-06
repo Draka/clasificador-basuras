@@ -1,0 +1,74 @@
+extends layout
+
+block content
+  main.container
+    .p-4.p-md-5.mb-4.rounded.mt-4
+    .row.g-5.mb-4
+      .col-md-6
+        if (type==3 || type==7)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de papel y carton
+          p Se recogen y se trasladan a planta, una vez allí, se mezclan con agua en una máquina llamada Pulper. Se utilizan aditivos para darle mayor resistencia y blancura y, finalmente, se retiran los impropios como las tintas, grapas etc.
+          p Para terminar el proceso, se tira esa pasta resultante en un tapiz  en el cual se van secando y posteriormente produciendo.
+
+        if (type==8)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de plástico
+          ul
+            li
+              | Mec&aacute;nica: Consiste en recoger el pl&aacute;stico, limpiarlo, molerlo o trocearlo, lavarlo de nuevo y enfardarlo.
+            li
+              | Qu&iacute;mico: Consiste en degradar el pl&aacute;stico para conseguir mol&eacute;culas simples mediante m&eacute;todos como:
+              ul
+                li Pir&oacute;lisis: Altas temperaturas en ausencia de ox&iacute;geno.
+                li Hidrogenaci&oacute;n: Altas temperaturas en presencia de hidr&oacute;geno.
+                li
+                  | Gasificaci&oacute;n: Convierte el pl&aacute;stico en combustible en presencia de ox&iacute;geno o hidr&oacute;geno.
+                li Craqueo: Altas temperaturas y catalizador.
+
+
+        else if (type==2 || type==5 || type==11)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de vidrio
+          p Una de las principales ventajas del vidrio es que puede ser reciclado y reutilizado tantas veces como sea necesario dado que, no pierde características ni propiedades.
+          ul
+            li Cuando llega a las f&aacute;bricas, se separa seg&uacute;n el color.
+            li
+              | Despu&eacute;s, se separa de todo el material impropio, como las etiquetas y los tapones.
+            li
+              | Por &uacute;ltimo, se tritua y se convierte en polvo (calc&iacute;n), se somete a altas temperaturas y se le a&ntilde;ade arena, hidr&oacute;xido de sodio y caliza.
+
+
+        else if (type==0)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de pilas y baterías
+          p Son potencialmente peligrosos y muy contaminantes debido a la presencia de metales pesado. Mediante un proceso mecánico se realiza una trituración refrigerada, a continuación, se lava con agua y pasa por una mesa vibratoria la cual se encarga de separar los metales férreos, no férreos, plástico, papel y polvo de pilas.
+          p Este polvo tiene otro proceso hidrometalúrgico que con ayuda de otros reactivos consigue recuperar los diferentes componentes.
+
+        else if (type==4 || type==9)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje del textil y calzado
+          p La ropa que es recogida y que no puede ser rehutilizada, es deshilada para formar otros productos como mantas, trapos para uso industriales… Si esto no es posible, se incinera para recuperar energía o se lleva al vertedero.
+
+        else if (type==1)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de residuos orgánicos
+          p También denominados biorresiduos. Está formado por todos los residuos biodegradables que podemos encontrar en el sector doméstico y comercial, pudiendo ser de origen vegetal o animal. Tanto si el tratamiento es anaeróbico como aeróbico, una población microbiana utiliza esta materia como alimento, degradándola y convirtiéndola.
+
+        else if (type==6)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de chatarra o metales
+          p Puede ser una mezcla, o no, de metales férricos (aquellos que contienen hierro) y no férricos (aquellos que no contienen hierro). El proceso de reciclaje es mecánico, mediante separación, cribados y corrientes de Foucault para separar los diferentes residuos, y, para finalizar, se trituran.
+
+        else if (type==10)
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Reciclaje de la basura
+          p Solemos denominar como basura todo residuo generado dentro del ámbito doméstico y comercial y que se tira sin separación previa. En este caso, es mas difícil clasificarla, dado que, depende de la estación del año, de si estamos en una población costera o no, si es turística, del nivel de vida etc.
+
+        else
+          h3.pb-4.mb-4.fst-italic.border-bottom
+            | Material no reconocido
+          p Intente tomando una mejor foto
+
+      .col-md-5.px-0
+        img(src="/images/upload", class="img-fluid")
